@@ -1,121 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>意大利语单词互动学习</title>
-    <style>
-        .word-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        .word-table th, .word-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-            background-color: white; /* 确保背景色是白色 */
-            color: black; /* 确保文字颜色是黑色 */
-        }
-        .word-table tr:nth-child(even){
-            background-color: #f2f2f2;
-        }
-        .word-table th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            background-color: #4CAF50;
-            color: white;
-        }
-        .italian-word {
-            cursor: pointer;
-            display: none;
-        }
-        .chinese-word:hover {
-            background-color: #ddd;
-        }
-    </style>
+    <title>欢迎界面</title>
 </head>
 <body>
-
-<h2>点击中文单词查看意大利语对照</h2>
-
-<h3>阳性名词</h3>
-<table class="word-table">
-    <tr>
-        <th>中文</th>
-        <th>意大利语</th>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">书</td>
-        <td class="italian-word">il libro</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">桌子</td>
-        <td class="italian-word">il tavolo</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">架子</td>
-        <td class="italian-word">lo scaffale</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">民族 (pl.)</td>
-        <td class="italian-word">i popoli</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">神话 (pl.)</td>
-        <td class="italian-word">i miti</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">书 (pl.)</td>
-        <td class="italian-word">i libri</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">客人 (pl.)</td>
-        <td class="italian-word">gli ospiti</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">另一个沙发</td>
-        <td class="italian-word">il divano</td>
-    </tr>
-</table>
-
-<h3>阴性名词</h3>
-<table class="word-table">
-    <tr>
-        <th>中文</th>
-        <th>意大利语</th>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">灯</td>
-        <td class="italian-word">la lampada</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">入口</td>
-        <td class="italian-word">l'entrata</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">文化 (pl.)</td>
-        <td class="italian-word">le culture</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">图书馆</td>
-        <td class="italian-word">la biblioteca</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">杂志 (pl.)</td>
-        <td class="italian-word">le riviste</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">扶手椅 (pl.)</td>
-        <td class="italian-word">le poltrone</td>
-    </tr>
-</table>
-
-<script>
-    function toggleWord(td) {
-        var italianWord = td.nextElementSibling;
-        italianWord.style.display = italianWord.style.display === 'none' ? 'table-cell' : 'none';
-    }
-</script>
-
+    <h1>Hello world</h1>
+    <p>以下是我的页面链接：</p>
+    <ul>
+        <li><a href="单词成员预热.html">单词列表</a></li>
+        <li><a href="缩合小对话.html">缩合小对话</a></li>
+    </ul>
 </body>
 </html>
