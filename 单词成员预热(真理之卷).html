@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>意大利语单词互动学习</title>
+    <style>
+        .word-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .word-table th, .word-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            background-color: white; /* 确保背景色是白色 */
+            color: black; /* 确保文字颜色是黑色 */
+        }
+        .word-table tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+        .word-table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .italian-word {
+            cursor: pointer;
+            display: none;
+        }
+        .chinese-word:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<h2>点击中文单词查看意大利语对照</h2>
+
+<h3>阳性名词</h3>
+<table class="word-table">
+    <tr>
+        <th>中文</th>
+        <th>意大利语</th>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">年</td>
+        <td class="italian-word">l'anno</td>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">茶</td>
+        <td class="italian-word">il tè</td>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">柠檬</td>
+        <td class="italian-word">il limone</td>
+    </tr>
+</table>
+
+<h3>阴性名词</h3>
+<table class="word-table">
+    <tr>
+        <th>中文</th>
+        <th>意大利语</th>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">寻找</td>
+        <td class="italian-word">la ricerca</td>
+    </tr>
+	 <tr>
+        <td onclick="toggleWord(this)">寻找 (pl.)</td>
+        <td class="italian-word">le ricerche</td>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">最终</td>
+        <td class="italian-word">la fine</td>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">羊皮卷</td>
+        <td class="italian-word">La pergamena</td>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">真理</td>
+        <td class="italian-word">La verità</td>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">桃子</td>
+        <td class="italian-word">la pesca</td>
+    </tr>
+</table>
+
+<script>
+    function toggleWord(td) {
+        var italianWord = td.nextElementSibling;
+        italianWord.style.display = italianWord.style.display === 'none' ? 'table-cell' : 'none';
+    }
+</script>
+
+</body>
+</html>

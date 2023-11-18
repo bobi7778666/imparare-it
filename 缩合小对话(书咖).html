@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对话练习</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .dialogue {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .dialogue p {
+            padding: 5px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        .dialogue p:last-child {
+            border-bottom: none;
+        }
+        .italian {
+            display: none;
+            margin-top: 5px;
+            color: #444;
+            font-style: italic;
+        }
+        .contracted-preposition {
+            opacity: 0.5; /* 改为50%透明度 */
+        }
+        .capitalize::first-letter {
+            text-transform: capitalize;
+        }
+        @media screen and (max-width: 600px) {
+            .dialogue {
+                width: 100%;
+                margin: 10px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="dialogue">
+    <p onclick="toggleDialogue(this)">丧彪：你看到桌子上的那本书了吗？</p>
+    <p class="italian">Matteo: hai visto quel libro sul tavolo?</p>
+    
+    <p onclick="toggleDialogue(this)">小美：哪本书？靠近灯的那本吗？</p>
+    <p class="italian">Beatrice: quale libro? quello vicino alla lampada?</p>
+    
+    <p onclick="toggleDialogue(this)">丧彪：不，是之前入口旁边架子里的那本。</p>
+    <p class="italian">Matteo: no, quello prima sullo scaffale accanto all'entrata.</p>
+    
+    <p onclick="toggleDialogue(this)">小美：啊，那本书！嗯呢，在那儿呢，是我放的。很有趣，讲的是古代民族的文化。</p>
+    <p class="italian">Beatrice: ah, quel libro! sì, è lì, l'ho messo io. è interessante, parla delle culture degli antichi popoli.</p>
+    
+    <p onclick="toggleDialogue(this)">丧彪：太好了。我想读一些关于他们神话的东西。</p>
+    <p class="italian">Matteo: ottimo! Vorrei leggere qualcosa sui loro miti.</p>
+    
+    <p onclick="toggleDialogue(this)">小美：那些角落里的书你读过了吗？</p>
+    <p class="italian">Bea: E quei libri nell'angolo? Li hai letti?</p>
+    
+    <p onclick="toggleDialogue(this)">丧彪：不，那些书是Carla的。她昨天从图书馆借来的。</p>
+    <p class="italian">Matt: No, quei libri sono di Carla. Lei li ha presi dalla biblioteca ieri.</p>
+    
+    <p onclick="toggleDialogue(this)">小美：我明白了。那些放在扶手椅上的杂志呢？</p>
+    <p class="italian">Bea: Capisco. E quelle riviste sulle poltrone?</p>
+    
+    <p onclick="toggleDialogue(this)">丧彪：啊，那些是给客人的。我喜欢提供各种阅读选择。</p>
+    <p class="italian">Matt: Ah, quelle sono per gli ospiti. Mi piace offrire varie letture.</p>
+    
+    <p onclick="toggleDialogue(this)">小美：好的，那我就拿一本杂志和书架上的一本书，打算今天下午就这么愉快地度过了。</p>
+    <p class="italian">Bea: Bene, allora prendo una di quelle riviste e un libro dagli scaffali. e voglio godermi così il pomeriggio.</p>
+    
+    <p onclick="toggleDialogue(this)">丧彪：完美。我也拿本儿角落的书，然后坐在另一个沙发上，这下午就这样了。</p>
+    <p class="italian">Matt: Perfetto. Prenderò anch'io un libro dall'angolo e mi siederò sull'altro divano, passerò così il pomeriggio.</p>
+</div>
+
+<h2 onclick="toggleItalianText()" style="cursor: pointer;">Il Testo Italiano</h2>
+<div id="italianText" style="display: none;">
+    <p class="capitalize">Matteo: Hai visto que<span class="contracted-preposition">l</span> libro su<span class="contracted-preposition">l</span> tavolo?</p>
+    <p class="capitalize">Beatrice: Quale libro? Que<span class="contracted-preposition">llo</span> vicino a<span class="contracted-preposition">lla</span> lampada?</p>
+    <p class="capitalize">Matteo: No, que<span class="contracted-preposition">llo</span> prima su<span class="contracted-preposition">llo</span> scaffale accanto a<span class="contracted-preposition">ll'</span>entrata.</p>
+    <p class="capitalize">Beatrice: Ah, que<span class="contracted-preposition">l</span> libro! Sì, è lì, l'ho messo io. È interessante, parla de<span class="contracted-preposition">lle</span> culture de<span class="contracted-preposition">gli</span> antichi popoli.</p>
+    <p class="capitalize">Matteo: Ottimo! Vorrei leggere qualcosa su<span class="contracted-preposition">i</span> loro miti.</p>
+    <p class="capitalize">Bea: E que<span class="contracted-preposition">i</span> libri ne<span class="contracted-preposition">ll'</span>angolo? Li hai letti?</p>
+    <p class="capitalize">Matt: No, que<span class="contracted-preposition">i</span> libri sono di Carla. Lei li ha presi da<span class="contracted-preposition">lla</span> biblioteca ieri.</p>
+    <p class="capitalize">Bea: Capisco. E que<span class="contracted-preposition">lle</span> riviste su<span class="contracted-preposition">lle</span> poltrone?</p>
+    <p class="capitalize">Matt: Ah, que<span class="contracted-preposition">lle</span> sono per gli ospiti. Mi piace offrire varie letture.</p>
+    <p class="capitalize">Bea: Bene, allora prendo una di que<span class="contracted-preposition">lle</span> riviste e un libro da<span class="contracted-preposition">gli</span> scaffali. E voglio godermi così il pomeriggio.</p>
+    <p class="capitalize">Matt: Perfetto. Prenderò anch'io un libro da<span class="contracted-preposition">ll'</span>angolo e mi siederò su<span class="contracted-preposition">ll'</span>altro divano, passerò così il pomeriggio.</p>
+</div>
+
+<script>
+    function toggleDialogue(paragraph) {
+        var translation = paragraph.nextElementSibling;
+        var allTranslations = document.querySelectorAll('.italian');
+        allTranslations.forEach(function(italianParagraph) {
+            if (italianParagraph !== translation) {
+                italianParagraph.style.display = 'none';
+            }
+        });
+        translation.style.display = translation.style.display === 'none' ? 'block' : 'none';
+    }
+    
+    function toggleItalianText() {
+        var italianTextDiv = document.getElementById('italianText');
+        italianTextDiv.style.display = italianTextDiv.style.display === 'none' ? 'block' : 'none';
+    }
+</script>
+
+</body>
+</html>
