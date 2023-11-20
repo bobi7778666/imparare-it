@@ -1,101 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>意大利语单词互动学习</title>
-    <style>
-        .word-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    h2, h4 {
+        text-align: center;
+    }
+
+    .word-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .word-table td, .word-table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .word-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .masculine {
+        background-color: #0a7696;
+        color: white;
+    }
+	
+	.feminine {
+        background-color: #95475f;
+        color: white;
+    }
+
+    .italian-word {
+        display: none;
+        color: #233264;
+		text-align: center;
+    }
+
+    @media (max-width: 600px) {
+        .word-table td, .word-table th {
+            font-size: 14px;
         }
-        .word-table th, .word-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-            background-color: white; /* 确保背景色是白色 */
-            color: black; /* 确保文字颜色是黑色 */
-        }
-        .word-table tr:nth-child(even){
-            background-color: #f2f2f2;
-        }
-        .word-table th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            background-color: #4CAF50;
-            color: white;
-        }
-        .italian-word {
-            cursor: pointer;
-            display: none;
-        }
-        .chinese-word:hover {
-            background-color: #ddd;
-        }
-    </style>
+    }
+</style>
+<script>
+function toggleWord(element) {
+    var next = element.parentNode.nextElementSibling;
+    if (next && next.classList.contains('italian-word')) {
+        next.style.display = next.style.display === 'none' ? 'block' : 'none';
+    }
+}
+</script>
 </head>
 <body>
 
-<h2>点击中文单词查看意大利语对照</h2>
+<h2>点击中文单词<br>查看意大利语对照</h2>
 
-<h3>阳性名词</h3>
 <table class="word-table">
     <tr>
-        <th>中文</th>
-        <th>意大利语</th>
+        <th class="masculine">阳性名词</th>
     </tr>
-    <tr>
-        <td onclick="toggleWord(this)">年</td>
-        <td class="italian-word">l'anno</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">茶</td>
-        <td class="italian-word">il tè</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">柠檬</td>
-        <td class="italian-word">il limone</td>
-    </tr>
-</table>
-
-<h3>阴性名词</h3>
-<table class="word-table">
-    <tr>
-        <th>中文</th>
-        <th>意大利语</th>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">寻找</td>
-        <td class="italian-word">la ricerca</td>
-    </tr>
+		<tr>
 	 <tr>
-        <td onclick="toggleWord(this)">寻找 (pl.)</td>
-        <td class="italian-word">le ricerche</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">最终</td>
-        <td class="italian-word">la fine</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">羊皮卷</td>
-        <td class="italian-word">La pergamena</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">真理</td>
-        <td class="italian-word">La verità</td>
-    </tr>
-    <tr>
-        <td onclick="toggleWord(this)">桃子</td>
-        <td class="italian-word">la pesca</td>
-    </tr>
+		<td onclick="toggleWord(this)">年</td>
+	</tr>
+	<tr class="italian-word">
+		<td>l'anno</td>
+	</tr>
+	<tr>
+		<td onclick="toggleWord(this)">茶</td>
+	</tr>
+	<tr class="italian-word">
+		<td>il tè</td>
+	</tr>
+	<tr>
+		<td onclick="toggleWord(this)">柠檬</td>
+	</tr>
+	<tr class="italian-word">
+		<td>il limone</td>
+	</tr>
+
 </table>
 
-<script>
-    function toggleWord(td) {
-        var italianWord = td.nextElementSibling;
-        italianWord.style.display = italianWord.style.display === 'none' ? 'table-cell' : 'none';
-    }
-</script>
+<table class="word-table">
+    <tr>
+        <th class="feminine">阴性名词</th>
+    </tr>
+	<tr>
+		<td onclick="toggleWord(this)">寻找</td>
+	</tr>
+	<tr class="italian-word">
+		<td>la ricerca</td>
+	</tr>
+	<tr>
+		<td onclick="toggleWord(this)">寻找 (pl.)</td>
+	</tr>
+	<tr class="italian-word">
+		<td>le ricerche</td>
+	</tr>
+	<tr>
+		<td onclick="toggleWord(this)">最终</td>
+	</tr>
+	<tr class="italian-word">
+		<td>la fine</td>
+	</tr>
+	<tr>
+		<td onclick="toggleWord(this)">羊皮卷</td>
+	</tr>
+	<tr class="italian-word">
+		<td>La pergamena</td>
+	</tr>
+	<tr>
+		<td onclick="toggleWord(this)">真理</td>
+	</tr>
+	<tr class="italian-word">
+		<td>La verità</td>
+	</tr>
+	<tr>
+		<td onclick="toggleWord(this)">桃子</td>
+	</tr>
+	<tr class="italian-word">
+		<td>la pesca</td>
+</table>
 
 </body>
 </html>
