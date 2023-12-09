@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台词</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .dialogue {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .dialogue p {
+            padding: 5px;
+            margin: 5px 0;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        .dialogue p:last-child {
+            border-bottom: none;
+        }
+        .italian {
+            display: none;
+            margin-top: 5px;
+            color: #444;
+            font-style: italic;
+        }
+        .contracted-preposition {
+            opacity: 0.5; /* 改为50%透明度 */
+        }
+        .capitalize::first-letter {
+            text-transform: capitalize;
+        }
+        @media screen and (max-width: 600px) {
+            .dialogue {
+                width: 100%;
+                margin: 10px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<<div class="dialogue">
+    <p onclick="toggleDialogue(this)">寒冷也是一个完全陌生的维度。</p>
+    <p class="italian">il freddo anche è un'altra dimensione assolutamente sconosciuta</p>
+	
+	<p onclick="toggleDialogue(this)">当我去往那里时，我记得我问自己：</p>
+    <p class="italian"> mentre andavo ricordo che mi domandavo </p>
+    
+    <p onclick="toggleDialogue(this)">零下50度，咋活啊？</p>
+    <p class="italian">ma come si vive a -50,</p>
+    
+    <p onclick="toggleDialogue(this)">人咋动啊？零下50度是啥色儿？零下50度的冷是个啥啊？</p>
+    <p class="italian">come ci si muove, quali sono i colori di -50 gradi, cos'è il freddo a -50 gradi </p>
+    
+    <p onclick="toggleDialogue(this)">我当时一无所知。事实上，当我到那儿了我才意识到我一无所知。</p>
+    <p class="italian">non avevo proprio idea, in effetti, quando poi sono arrivata, mi sono resa conto che non avevo idea </p>
+    
+    <p onclick="toggleDialogue(this)">我们不去亲身体验就不会懂。</p>
+    <p class="italian">non abbiamo idea se non l'abbiamo provato...</p>
+</div>
+
+<h2 onclick="toggleItalianText()" style="cursor: pointer;">Il Testo Italiano</h2>
+<div id="italianText" style="display: none;">
+	<p class="capitalize">il freddo anche è un'altra dimensione assolutamente sconosciuta. Mentre andavo ricordo che mi domandavo:</p>
+	<p class="capitalize">ma come <span class="contracted-preposition" style="color: blue;">si vive</span> a -50?</p>
+	<p class="capitalize">come <span class="contracted-preposition" style="color: purple;">ci si muove</span>, </p>
+	<p class="capitalize">quali sono i colori di -50 gradi, cos'è il freddo a -50 gradi?</p>
+	<p class="capitalize">non avevo proprio idea, in effetti, quando poi sono arrivata, mi sono resa conto che non avevo idea</p>
+	<p class="capitalize">non abbiamo idea se non l'abbiamo provato...</p>
+</div>
+
+<script>
+    function toggleDialogue(paragraph) {
+        var translation = paragraph.nextElementSibling;
+        var allTranslations = document.querySelectorAll('.italian');
+        allTranslations.forEach(function(italianParagraph) {
+            if (italianParagraph !== translation) {
+                italianParagraph.style.display = 'none';
+            }
+        });
+        translation.style.display = translation.style.display === 'none' ? 'block' : 'none';
+    }
+    
+    function toggleItalianText() {
+        var italianTextDiv = document.getElementById('italianText');
+        italianTextDiv.style.display = italianTextDiv.style.display === 'none' ? 'block' : 'none';
+    }
+</script>
+
+</body>
+</html>
