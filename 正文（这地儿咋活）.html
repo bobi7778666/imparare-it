@@ -36,6 +36,17 @@
         .capitalize::first-letter {
             text-transform: capitalize;
         }
+        .video-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .video-title {
+            margin-top: 20px;
+        }
+        .video-description {
+            margin-top: 10px;
+            color: #666;
+        }
         @media screen and (max-width: 600px) {
             .dialogue {
                 width: 100%;
@@ -48,18 +59,24 @@
 <body>
 
     <div class="video-container">
+        <div class="video-title">南极咋活</div>
         <figure>
             <video width="600" controls>
                 <source src="南极咋活.mp4" type="video/mp4">
             </video>
-            <figcaption>视频标题 1</figcaption>
+            <figcaption class="video-description">“人们在生活中都是探险者”，作者也是如此，她将自己称为生活的探险者。
+作者在南极的第一次经历被记录在她写的关于最后一次前往康科迪亚基地的远征的书中。
+除了这次经历外，作者对其他标签不太感兴趣。作者在极端寒冷的环境中，面对大自然的奇观，感到措手不及。</figcaption>
         </figure>
+    </div>
 
+    <div class="video-container">
+        <div class="video-title">小台词 0.75x</div>
         <figure>
             <video width="600" controls>
                 <source src="南极咋活0.75x.mp4" type="video/mp4">
             </video>
-            <figcaption>视频标题 2</figcaption>
+            <figcaption class="video-description">我们今天就听这段话，里面有两句所谓的“无人称动词”，其中一句是“无人称+自反动词”</figcaption>
         </figure>
     </div>
 
