@@ -46,12 +46,23 @@
     </style>
 </head>
 <body>
-    <video width="600" controls>
-      <source src="南极咋活.mp4" type="video/mp4">
-    </video>
-    <video width="600" controls>
-      <source src="南极咋活0.75x.mp4" type="video/mp4">
-    </video>
+
+    <div class="video-container">
+        <figure>
+            <video width="600" controls>
+                <source src="南极咋活.mp4" type="video/mp4">
+            </video>
+            <figcaption>视频标题 1</figcaption>
+        </figure>
+
+        <figure>
+            <video width="600" controls>
+                <source src="南极咋活0.75x.mp4" type="video/mp4">
+            </video>
+            <figcaption>视频标题 2</figcaption>
+        </figure>
+    </div>
+
 
 <<div class="dialogue">
     <p onclick="toggleDialogue(this)">寒冷也是一个完全陌生的维度。</p>
