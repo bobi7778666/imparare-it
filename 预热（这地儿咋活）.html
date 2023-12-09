@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .word-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .word-table td, .word-table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .word-table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .masculine {
+        background-color: #0a7696;
+        color: white;
+		text-align: left; 
+    }
+	
+	.feminine {
+        background-color: #95475f;
+        color: white;
+		text-align: left; 
+    }
+	
+	.altre {
+        background-color: #1e848c;
+        color: white;
+		text-align: left; 
+    }
+
+    .italian-word {
+        display: none;
+        color: #233264;
+    }
+
+    @media (max-width: 600px) {
+        .word-table td, .word-table th {
+            font-size: 14px;
+        }
+    }
+</style>
+<script>
+function toggleWord(element) {
+    var next = element.parentNode.nextElementSibling;
+    if (next && next.classList.contains('italian-word')) {
+        next.style.display = next.style.display === 'none' ? 'block' : 'none';
+    }
+}
+</script>
+</head>
+<body>
+
+<h2>点击中文单词<br>查看意大利语对照</h2>
+
+<table class="word-table">
+    <tr>
+        <th class="masculine">阳性名词</th>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">冷</td>
+    </tr>
+    <tr class="italian-word">
+        <td>il freddo</td>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">颜色</td>
+    </tr>
+    <tr class="italian-word">
+        <td>il colore</td>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">年</td>
+    </tr>
+    <tr class="italian-word">
+        <td>l'anno</td>
+    </tr>
+</table>
+
+<table class="word-table">
+    <tr>
+        <th class="feminine">阴性名词</th>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">维度</td>
+    </tr>
+    <tr class="italian-word">
+        <td>la dimensione</td>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">想法</td>
+    </tr>
+    <tr class="italian-word">
+        <td>l'idea</td>
+    </tr>
+</table>
+
+<table class="word-table">
+    <tr>
+        <th class="altre">其它词</th>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">维度</td>
+    </tr>
+    <tr class="italian-word">
+        <td>la dimensione</td>
+    </tr>
+    <tr>
+        <td onclick="toggleWord(this)">想法</td>
+    </tr>
+    <tr class="italian-word">
+        <td>l'idea</td>
+    </tr>
+</table>
+
+
+</body>
+</html>
